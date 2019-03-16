@@ -1,20 +1,40 @@
 package br.com.coontrol.ctrl.api.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
-public class Pessoa extends AbstractEntity {
+public class Pessoa implements Serializable  {
 	
-	private static final long serialVersionUID = 8891303934503253968L;
-
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	protected Long codigo;
+		
+	@Column(nullable = false)
 	private String nome;
 	
+	@Column(nullable = false)
 	private Date dataNascimento;
 	
+	@Column(nullable = false)
 	private String sexo;
+	
+	public Long getCodigo() {
+		return codigo;
+	}
 
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
+	
 	public String getNome() {
 		return nome;
 	}

@@ -1,29 +1,25 @@
 package br.com.coontrol.ctrl.api.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.data.annotation.CreatedDate;
 
 public abstract class AbstractEntity implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long codigo;
+	@Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "data_criacao", nullable = false, updatable = false)
+    @CreatedDate
+    protected Date dataCriacao;
 	
-	private Boolean ativo;
+	protected Boolean ativo;
 	
-	public Long getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
-
 	public Boolean getAtivo() {
 		return ativo;
 	}
