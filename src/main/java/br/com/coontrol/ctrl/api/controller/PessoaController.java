@@ -10,12 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.coontrol.ctrl.api.model.Pessoa;
 import br.com.coontrol.ctrl.api.repository.PessoaRepository;
+import br.com.coontrol.ctrl.api.service.PessoaService;
 
 @RestController
 public class PessoaController {
 	
 	@Autowired
 	PessoaRepository pessoaRepository;
+	
+	@Autowired
+	PessoaService pessoaService;
 	
 	@GetMapping("/pessoas")
 	public Page<Pessoa> getPessoas(Pageable pageable) {
@@ -24,8 +28,7 @@ public class PessoaController {
 	
 	@PostMapping("/pessoas")
 	public Pessoa salvarPessoa(@RequestBody Pessoa pessoa) {
+		pessoaService.inserirSignoPessoa(pessoa);
 		return pessoaRepository.save(pessoa);
 	}
-	
-
 }

@@ -27,6 +27,9 @@ public class Pessoa implements Serializable  {
 	@Column(nullable = false)
 	private String sexo;
 	
+	@Column(nullable = false)
+	private String signo;
+	
 	public Long getCodigo() {
 		return codigo;
 	}
@@ -57,5 +60,13 @@ public class Pessoa implements Serializable  {
 
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
+	}
+
+	public String getSigno() {
+		return signo;
+	}
+
+	public void setSigno(String signo) {
+		this.signo = signo;
 	}	
 }
