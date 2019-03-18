@@ -8,7 +8,5 @@ import br.com.coontrol.ctrl.api.model.Pessoa;
 
 @RepositoryRestResource(collectionResourceRel = "pessoa", path = "pessoas")
 public interface PessoaRepository extends PagingAndSortingRepository<Pessoa, Long>{
-
-
 	
 }
