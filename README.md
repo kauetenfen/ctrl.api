@@ -15,8 +15,10 @@ Foi utilizado o Spring security com formulário de usuario e senha para controle
 <b>usuario: coontrol - senha: 1234</b>
 porta configurada: 8080
 
-Banco de dados: Postgres
+<h3>Banco de dados</h3>
+Postgres
 É criado automaticamente um usuário padrão no banco ao iniciar o sistema
+<b>usuario: postgres - senha: potgres</b>
 
 Ambos os projetos já contém o servidor tomcat embutido, basta somente subir os dois projetos com o comando
 mvn spring-boot:run e acessar a aplicação pelo link http://localhost:8080/index.xhtml
