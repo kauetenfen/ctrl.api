@@ -10,7 +10,7 @@ porta configurada: 8081
 
 ctrl.view: projeto spring-boot para disponibilizar a camada de interfaces
 Foi utilizado o Spring security com formulário de usuario e senha para controle de segurança
-usuario: coontrol - senha: 1234
+usuario: <b>coontrol</b> - senha: 1234
 porta configurada: 8080
 
 Banco de dados: Postgres
