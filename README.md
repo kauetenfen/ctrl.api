@@ -3,12 +3,14 @@ Projeto de serviços para a empresa Coontrol
 
 Instruções
 
-<h3>ctrl.api</h3>: projeto spring-boot que contém a camada de serviços rest
+<h3>ctrl.api</h3> 
+Projeto spring-boot que contém a camada de serviços rest
 Foi utilizado o Spring security com Basic Authentication para controle de segurança
 <b>usuario: coontrol - senha: coontrol</b>
 porta configurada: 8081
 
-ctrl.view: projeto spring-boot para disponibilizar a camada de interfaces
+<h3>ctrl.view</h3>
+Projeto spring-boot para disponibilizar a camada de interfaces
 Foi utilizado o Spring security com formulário de usuario e senha para controle de segurança
 <b>usuario: coontrol - senha: 1234</b>
 porta configurada: 8080
