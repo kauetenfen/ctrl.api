@@ -14,11 +14,13 @@ import org.springframework.security.web.savedrequest.NullRequestCache;
 @EnableWebSecurity
 public class ConfigSecurity extends WebSecurityConfigurerAdapter {
 	
+	private static final String VALOR_PADRAO = "coontrol";
+
 	@Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-        auth.inMemoryAuthentication().withUser("coontrol")
-          .password(encoder.encode("coontrol")).roles("USER");
+        auth.inMemoryAuthentication().withUser(ConfigSecurity.VALOR_PADRAO)
+          .password(encoder.encode(ConfigSecurity.VALOR_PADRAO)).roles("USER");
     }
 	
 	protected void configure(HttpSecurity http) throws Exception {
