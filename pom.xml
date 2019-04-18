@@ -12,7 +12,7 @@
 	<artifactId>ctrl.api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ctrl.api</name>
-	<description>Demo project for Spring Boot</description>
+	<description>projeto coontrol</description>
 
 	<properties>
 		<java.version>1.8</java.version>
